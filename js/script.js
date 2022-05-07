@@ -1,5 +1,5 @@
 // VARIABLES
-const API = "https://api.edamam.com/api/nutrition-data?app_id=de21053a&app_key=10429744998e546c52222babd34059a1&nutrition-type=logging&ingr=";  // this references to the Edamame API. Add the ingredient to the end to access the data
+const API = "https://api.nal.usda.gov/fdc/v1/foods/search?api_key=4PDBxeBJbs8UKxXS7f3dzh6lmYb6hNulqgtrZMq4&query=";  // this references to the Edamame API. Add the ingredient to the end to access the data
 
 // EVENT REFERENCES
 const $btnSearch = $('#btnSearch');
@@ -12,8 +12,10 @@ $btnSearch.on('click', retreiveMacro);
 
 function retreiveMacro(evt) {
     evt.preventDefault();
-    $.ajax(API + $userInput).then(function(data){
-        console.log(data)
+    const userInput = $userInput.val();
+    $.ajax(API + userInput).then(function(data){
+        const firstResult = data.foods[0];
+        console.log(firstResult) // this code logs the first
     }, function(error) {
         console.log('Unexpected Error has occured, see below')
         console.log(error)
