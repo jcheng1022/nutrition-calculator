@@ -1,0 +1,15 @@
+* {
+    box-sizing:border-box;
+}
+body {
+    display: grid;
+    height: 100vh;
+    margin: 0;
+}
+
+
+div {
+    width: 500px;
+    height:500px;
+    border: solid black 2px;
+}
