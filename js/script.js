@@ -9,6 +9,8 @@ const foodArray = [];
 const $btnSearch = $("#btnSearch");
 const $btnAdd = $("#btnAdd");
 const $userInput = $('#userInput[type="text"]');
+let $selectFood = $('#selectFood');
+
 // EVENT LISTENERS
 $btnSearch.on("click", retreiveMacro);
 // $btnAdd.on('click', addToList);
@@ -19,8 +21,21 @@ function retreiveMacro(evt) {
   const userInput = $userInput.val();
   $.ajax(API + userInput).then(
     function (data) {
-           const foodArray = [data.foods]; // this line stores every result into an array
-            console.log(foodArray);
+        const foodChoices = data.foods;
+        for(let i=0;i<foodChoices.length;i++) {
+            const foodOption = document.createElement('option')
+            foodOption.value = foodChoices[i].description;
+            foodOption.innerHTML = foodChoices[i].description
+            $selectFood.append(foodOption);
+        }
+        console.log(foodChoices)
+        //   for(let i=0;i<foodChoices.length; i++) {
+        //        $selectFood.append(foodChoices.description);
+        //    }
+        //    for (let i=0; i < foodArray.length; i++) {
+        //        console.log()
+        //    }
+            // console.log(foodArray);
         
     //   const firstResult = data.foods[0];
     //   console.log(firstResult); // this code logs the first
