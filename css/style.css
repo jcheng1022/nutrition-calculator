@@ -2,14 +2,17 @@
     box-sizing:border-box;
 }
 body {
-    display: grid;
+    display: flex;
     height: 100vh;
     margin: 0;
+
 }
 
 
 div {
+    justify-content: space-around;
+    align-items:center;
     width: 500px;
-    height:500px;
+    height:300x;
     border: solid black 2px;
 }

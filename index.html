@@ -1,65 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
     <script src="js/script.js" defer></script>
     <title>Nutrition Calculator</title>
-</head>
-<body>
-    
-<header> 
+  </head>
+  <body>
+    <header>
+      <h1>Nutrition Calculator</h1>
+    </header>
 
-<h1> Nutrition Calculator</h1>
-</header>
+    <main>
+      <div id="nutritionForm">
+        <!--  this area will contain the input area and two buttons (search ingredient, add ingredient) -->
 
-<main>
+        <h2>Ingredient Search</h2>
+        <form>
+          <h3>Step One: Search your ingredient</h3>
+          <input id="userInput" type="text" />
+          <button id="btnSearch">Search Ingredient</button>
 
-<div id="nutritionForm">
-<!--  this area will contain the input area and two buttons (search ingredient, add ingredient) -->
+          <div id="selectForm">
+            <h3>Step Two: Find your Ingredient in our List</h3>
+            <label for="selectFood">Select an Ingredient</label>
+            <select id="selectFood" name="foodList"></select>
 
-    <h2> Ingredient Search</h2>
-    <form>
-        <input id="userInput" type="text"> 
-        <button id="btnSearch"> Search Ingredient</button>
-        <button id="btnAdd"> Add Ingredient to Your List</button>
+            <button id="btnAdd">Add Ingredient to Your List</button>
+          </div>
+        </form>
+      </div>
 
-        <div id='selectForm'> 
-        <label for="selectFood">Select an Ingredient</label>
-        <select id="selectFood" name="foodList">
-            <option value = "" disabled selected hidden> select an ingredient</option>
-           
-            
-        </select>
+      <div id="nutritionResult">
+        <h2>Macronutrient Information</h2>
+        <p id="macroInformation"></p>
+        <ul>
+          <li id="caloriesInfo">Calories</li>
+          <li id="fatInfo">Fat</li>
+          <li id="carbohydrateInfo">Carbohydrates</li>
+          <li id="proteinInfo">Protein</li>
+        </ul>
+      </div>
 
-        </div>
-    </form>
-</div>
-
-<div id="nutritionResult">
-
-    <h2> Macronutrient Information</h2>
-    <ul>
-        <li>Calories</li>
-        <li>Fat</li>
-        <li>Carbohydrates</li>
-        <li>Protein</li>
-    </ul>
-</div>
-
-<div id="addedIngredients">
+      <!-- <div id="addedIngredients">
     <h2>Your List of Added Ingredients</h2>
+    <ul id='listOfAddedFoods'>
+
+    </ul>
 </div>
 
 <div id="totalMacros">
     <h2>Total Macronutrient Information for Your List</h2>
-</div>
-
-</main>
-
-
-</body>
+</div> -->
+    </main>
+  </body>
 </html>

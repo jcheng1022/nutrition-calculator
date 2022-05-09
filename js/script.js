@@ -9,50 +9,64 @@ const foodArray = [];
 const $btnSearch = $("#btnSearch");
 const $btnAdd = $("#btnAdd");
 const $userInput = $('#userInput[type="text"]');
-let $selectFood = $('#selectFood');
-
+const $selectFood = $('#selectFood');
+const selectedFood = $('#selectFood option:selected');
+const $caloriesInfo = $('caloriesInfo');
+const $fatInfo = $('fatInfo');
+const $carbohydrateInfo = $('carbohydrateInfo');
+const $proteinInfo = $('carbohydrateInfo');
+const $listOfAddedFoods = $('#listOfAddedFoods');
 // EVENT LISTENERS
-$btnSearch.on("click", retreiveMacro);
+$btnSearch.on("click", searchFoods);
+// $btnAdd.on("click", addIngredient);
+// function addIngredient(evt) {
+//     evt.preventDefault();
+//     console.log(foodOption.value);
+// }
 // $btnAdd.on('click', addToList);
 // FUNCTIONS
 
-function retreiveMacro(evt) {
+function searchFoods(evt) {
   evt.preventDefault();
   const userInput = $userInput.val();
-  $.ajax(API + userInput).then(
+  const searchQuery = $.ajax(API + userInput);
+  searchQuery.then(
     function (data) {
         const foodChoices = data.foods;
         for(let i=0;i<foodChoices.length;i++) {
-            const foodOption = document.createElement('option')
-            foodOption.value = foodChoices[i].description;
-            foodOption.innerHTML = foodChoices[i].description
+            const foodOption = document.createElement('option');
+            foodOption.value = i;
+            foodOption.innerHTML = foodChoices[i].description;
             $selectFood.append(foodOption);
-        }
-        console.log(foodChoices)
-        //   for(let i=0;i<foodChoices.length; i++) {
-        //        $selectFood.append(foodChoices.description);
-        //    }
-        //    for (let i=0; i < foodArray.length; i++) {
-        //        console.log()
-        //    }
-            // console.log(foodArray);
-        
-    //   const firstResult = data.foods[0];
-    //   console.log(firstResult); // this code logs the first
-    },
+        }  
+    $btnAdd.click(function(evt){
+      evt.preventDefault();
+        const foodMenu = document.getElementById('selectFood');
+        const foodMenuValue = foodMenu.value; 
+        const individualFood = foodChoices[foodMenuValue]; // this prints out everything about the selected food
+        const individualFoodNutrients = individualFood.foodNutrients // this prints out all the nutrients
+        const protein = individualFoodNutrients[14].value;
+        console.log(individualFoodNutrients);
+
+  
+
+      // const chosenValue = document.getElementById('selectFood').value;
+      // console.log(chosenValue.description)
+    })
+      },
+    
     function (error) {
       console.log("Unexpected Error has occured, see below");
       console.log(error);
-    }
+    },
   );
 }
 
-
-// function to retrieve food results and turn them into array
-
-
-
-
+// $btnAdd.click(function(evt) {
+//   evt.preventDefault();
+//   const selectedFood = $('selectFood option:selected')
+//   $listOfAddedFoods.append(`<li>${selectedFood.description}</li>`);
+// })
 
 /* 
 NUTRITION CODES:
