@@ -16,6 +16,7 @@ const $fatInfo = $('fatInfo');
 const $carbohydrateInfo = $('carbohydrateInfo');
 const $proteinInfo = $('proteinInfo');
 const $listOfAddedFoods = $('#listOfAddedFoods');
+const $macroList = $('macroList');
 // EVENT LISTENERS
 $btnSearch.on("click", searchFoods);
 // $btnAdd.on("click", addIngredient);
@@ -45,12 +46,23 @@ function searchFoods(evt) {
         const foodMenuValue = foodMenu.value; 
         const individualFood = foodChoices[foodMenuValue]; // this prints out everything about the selected food
         const individualFoodNutrients = individualFood.foodNutrients // this prints out all the nutrients
-        function printNutrition(nutrient) {
-          for (let i=0;i<nutrient.length;i++) {
-            console.log(nutrient);
-          }
-        }
-        individualFoodNutrients.printNutrition();
+
+        for (let i=0; i < individualFoodNutrients.length; i++) {
+          const totalNutrient = individualFoodNutrients[i];
+          const nameOfNutrient = individualFoodNutrients[i].nutrientName;
+          const nutrientValue = individualFoodNutrients[i].value;
+          console.log(`${nameOfNutrient}: ${nutrientValue}`);
+        } // this loop prints out every nutrient
+
+
+        // function printNutrition() {
+        //   for (let i=0;i<individualFoodNutrients.length;i++) {
+        //     const foodNutritionInfo = document.createElement('li');
+        //     foodNutritionInfo.innerHTML = individualFoodNutrients[i];
+        //     $macroList.append(foodNutritionInfo);
+        //   }
+        // }
+        // printNutrition();
         
       // the below variable and function returns the protein value
         // const proteinArray = individualFoodNutrients.filter(filterProtein)
