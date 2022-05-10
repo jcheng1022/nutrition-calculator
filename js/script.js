@@ -55,43 +55,6 @@ function searchFoods(evt) {
         } // this loop prints out every nutrient
 
 
-        // function printNutrition() {
-        //   for (let i=0;i<individualFoodNutrients.length;i++) {
-        //     const foodNutritionInfo = document.createElement('li');
-        //     foodNutritionInfo.innerHTML = individualFoodNutrients[i];
-        //     $macroList.append(foodNutritionInfo);
-        //   }
-        // }
-        // printNutrition();
-        
-      // the below variable and function returns the protein value
-        // const proteinArray = individualFoodNutrients.filter(filterProtein)
-        // function filterProtein(nutrient) {
-        //   return nutrient.nutrientId === 1003;
-        // }
-        // const proteinIndex = individualFoodNutrients.indexOf(proteinArray);
-        // console.log(proteinIndex)
-
-        // const proteinValue = individualFoodNutrients[0].value;
-        // console.log(individualFoodNutrients);
-
-        //working below
-
-        // const proteinIndex = individualFoodNutrients.findIndex(filterProteinValue)
-        // function filterProteinValue(nutrient) {
-        //   return nutrient === '1003';
-        // }
-
-        // console.log(individualFoodNutrients[proteinIndex])
-        // console.log(proteinIndex)
-
-
-        // working above
-        // console.log(proteinValue)
-        // const protein = individualFoodNutrients[14].value;
-        // console.log(individualFoodNutrients);
-
-
     })
       },
     
@@ -103,29 +66,3 @@ function searchFoods(evt) {
 }
 
 
-
-
-// function classifyNutrients() {
-//   for (let i=0;i<individualFoodNutrients.length;i++){
-//   }
-// }
-
-
-
-// $btnAdd.click(function(evt) {
-//   evt.preventDefault();
-//   const selectedFood = $('selectFood option:selected')
-//   $listOfAddedFoods.append(`<li>${selectedFood.description}</li>`);
-// })
-
-/* 
-NUTRITION CODES:
-
-PROTEIN: 1003
-FAT: 1004
-CARBOHYDRATE:1005
-CALORIES (IN KCAL): 1008
-
-
-
-*/
