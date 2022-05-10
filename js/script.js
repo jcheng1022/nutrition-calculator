@@ -16,7 +16,7 @@ const $fatInfo = $('fatInfo');
 const $carbohydrateInfo = $('carbohydrateInfo');
 const $proteinInfo = $('proteinInfo');
 const $listOfAddedFoods = $('#listOfAddedFoods');
-const $macroList = $('macroList');
+const $macroList = $('#macroList');
 // EVENT LISTENERS
 $btnSearch.on("click", searchFoods);
 // $btnAdd.on("click", addIngredient);
@@ -51,7 +51,7 @@ function searchFoods(evt) {
           const totalNutrient = individualFoodNutrients[i];
           const nameOfNutrient = individualFoodNutrients[i].nutrientName;
           const nutrientValue = individualFoodNutrients[i].value;
-          console.log(`${nameOfNutrient}: ${nutrientValue}`);
+          $macroList.append(`<li>${nameOfNutrient}: ${nutrientValue}</li>`);
         } // this loop prints out every nutrient
 
 
