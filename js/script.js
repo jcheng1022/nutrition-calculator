@@ -14,7 +14,7 @@ const selectedFood = $('#selectFood option:selected');
 const $caloriesInfo = $('caloriesInfo');
 const $fatInfo = $('fatInfo');
 const $carbohydrateInfo = $('carbohydrateInfo');
-const $proteinInfo = $('carbohydrateInfo');
+const $proteinInfo = $('proteinInfo');
 const $listOfAddedFoods = $('#listOfAddedFoods');
 // EVENT LISTENERS
 $btnSearch.on("click", searchFoods);
@@ -45,13 +45,41 @@ function searchFoods(evt) {
         const foodMenuValue = foodMenu.value; 
         const individualFood = foodChoices[foodMenuValue]; // this prints out everything about the selected food
         const individualFoodNutrients = individualFood.foodNutrients // this prints out all the nutrients
-        const protein = individualFoodNutrients[14].value;
-        console.log(individualFoodNutrients);
+        function printNutrition(nutrient) {
+          for (let i=0;i<nutrient.length;i++) {
+            console.log(nutrient);
+          }
+        }
+        individualFoodNutrients.printNutrition();
+        
+      // the below variable and function returns the protein value
+        // const proteinArray = individualFoodNutrients.filter(filterProtein)
+        // function filterProtein(nutrient) {
+        //   return nutrient.nutrientId === 1003;
+        // }
+        // const proteinIndex = individualFoodNutrients.indexOf(proteinArray);
+        // console.log(proteinIndex)
 
-  
+        // const proteinValue = individualFoodNutrients[0].value;
+        // console.log(individualFoodNutrients);
 
-      // const chosenValue = document.getElementById('selectFood').value;
-      // console.log(chosenValue.description)
+        //working below
+
+        // const proteinIndex = individualFoodNutrients.findIndex(filterProteinValue)
+        // function filterProteinValue(nutrient) {
+        //   return nutrient === '1003';
+        // }
+
+        // console.log(individualFoodNutrients[proteinIndex])
+        // console.log(proteinIndex)
+
+
+        // working above
+        // console.log(proteinValue)
+        // const protein = individualFoodNutrients[14].value;
+        // console.log(individualFoodNutrients);
+
+
     })
       },
     
@@ -61,6 +89,16 @@ function searchFoods(evt) {
     },
   );
 }
+
+
+
+
+// function classifyNutrients() {
+//   for (let i=0;i<individualFoodNutrients.length;i++){
+//   }
+// }
+
+
 
 // $btnAdd.click(function(evt) {
 //   evt.preventDefault();
