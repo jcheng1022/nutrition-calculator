@@ -17,6 +17,10 @@ const $carbohydrateInfo = $('carbohydrateInfo');
 const $proteinInfo = $('proteinInfo');
 const $listOfAddedFoods = $('#listOfAddedFoods');
 const $macroList = $('#macroList');
+const $protein = $('#protein');
+const $carbohydrate = $('#carbohydrate');
+const $fat = $('#fat');
+const $calories = $('#calories');
 // EVENT LISTENERS
 $btnSearch.on("click", searchFoods);
 // $btnAdd.on("click", addIngredient);
@@ -50,8 +54,18 @@ function searchFoods(evt) {
         for (let i=0; i < individualFoodNutrients.length; i++) {
           const totalNutrient = individualFoodNutrients[i];
           const nameOfNutrient = individualFoodNutrients[i].nutrientName;
+          const idOfNutrient = individualFoodNutrients[i].nutrientId;
           const nutrientValue = individualFoodNutrients[i].value;
           $macroList.append(`<li>${nameOfNutrient}: ${nutrientValue}</li>`);
+          if (idOfNutrient === 1003) {
+            $protein.append(` : ${nutrientValue}`);
+          } else if (idOfNutrient === 1004) {
+            $fat.append(` : ${nutrientValue}`);
+          } else if (idOfNutrient === 1005) {
+            $carbohydrate.append(` : ${nutrientValue}`);
+          } else if (idOfNutrient === 1008) {
+            $calories.append(` : ${nutrientValue}`);
+          }
         } // this loop prints out every nutrient
 
 
