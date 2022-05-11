@@ -16,7 +16,43 @@ body {
 header {
     text-align:center;
     background-color:#9098B1;
-    border-bottom: 5px solid white;
+    width: 100vw;
+
+}
+
+#macros {
+    display:flex;
+    text-align:center;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+#calories{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 200px;
+}
+
+#protein{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 200px;
+}
+
+#fat{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 200px;
+}
+
+#carbohydrate{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 200px;
 }
 
 #nutritionForm{
@@ -24,16 +60,45 @@ header {
 
 }
 
-#searchIngredients {
+#topSection {
     display:flex;
-    justify-content:center;
+    justify-content: center; 
+
 }
 
+#ingredientHeader {
+    padding: 10px;
+    width: 100%;
+}
 
+#formStepOne {
+    width: 100%;
+
+}
+
+#selectForm{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#formStepOne {
+    display:flex;
+    text-align:center;
+    justify-content: center;
+    padding: 30px;
+}
+#ingredientForm {
+    display:flex;
+    text-align:center;
+    justify-content: center;
+    padding: 30px;
+}
 button {
     color: red;
     background-color:white;
     font-family: 'Russo One', sans-serif;
 
 }
+
 

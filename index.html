@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
-    <script src="js/script.js" defer></script>
-    <title>Nutrition Calculator</title>
-  </head>
-  <body>
-    <header>
-      <h1>Nutrition Calculator</h1>
-    </header>
 
-    <main>
-        <div id = "searchIngredients">
-        <h2>Ingredient Search</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <title>Nutrition Calculator</title>
+</head>
+
+<body>
+  <header>
+    <h1>Nutrition Calculator</h1>
+  </header>
+
+  <main>
+    <div id="topSection">
+      <h2>Ingredient Search</h2>
+    </div>
+      <div id="searchIngredients">
+        <div id='ingredientHeader'>
+        </div>
+        <div id="formStepOne">
         <form>
           <h3>Step One: Search your ingredient</h3>
           <input id="userInput" type="text" />
           <button id="btnSearch">Search Ingredient</button>
         </div>
-
-          <div id="selectForm">
-            <h3>Step Two: Find your Ingredient in our List</h3>
-            <label for="selectFood">Select an Ingredient</label>
-            <select id="selectFood" name="foodList"></select>
-
-            <button id="btnGet">Get Nutrition Info</button>
-          </div>
-        </form>
-
-        <div id='macros'>
-          <h2> Macronutrient Information</h2>
-          <p id="calories"> Calories</p>
-          <p id="protein"> Protein</p>
-          <p id="fat"> Fat</p>
-          <p id="carbohydrate"> Carbohydrate</p>
-
-        </div>
-
-      <div id="nutritionResult">
-        <h2> Complete Nutritional Information</h2>
-        <p id="macroInformation"></p>
-        <ul id="macroList">
-
-        </ul>
       </div>
 
-      <!-- <div id="addedIngredients">
+      <div id="selectForm">
+        <h3>Step Two: Find your Ingredient in our List</h3>
+      </div>
+      <div id="ingredientForm">
+        <label for="selectFood">Select an Ingredient</label>
+        <select id="selectFood" name="foodList"></select>
+        <button id="btnGet">Get Nutrition Info</button>
+      </div>
+      </form>
+
+    <div id='macros'>
+      <div id="macrosHeader">
+        <h2> Macronutrient Information</h2>
+      </div>
+      <span id="calories"> Calories</span>
+      <span id="protein"> Protein</span>
+      <span id="fat"> Fat</span>
+      <span id="carbohydrate"> Carbohydrate</span>
+
+    </div>
+
+    <div id="nutritionResult">
+      <h2> Complete Nutritional Information</h2>
+      <p id="macroInformation"></p>
+      <ul id="macroList">
+
+      </ul>
+    </div>
+
+    <!-- <div id="addedIngredients">
     <h2>Your List of Added Ingredients</h2>
     <ul id='listOfAddedFoods'>
 
@@ -59,6 +70,7 @@
 <div id="totalMacros">
     <h2>Total Macronutrient Information for Your List</h2>
 </div> -->
-    </main>
-  </body>
+  </main>
+</body>
+
 </html>

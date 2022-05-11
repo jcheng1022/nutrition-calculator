@@ -56,17 +56,19 @@ function searchFoods(evt) {
           const nameOfNutrient = individualFoodNutrients[i].nutrientName;
           const idOfNutrient = individualFoodNutrients[i].nutrientId;
           const nutrientValue = individualFoodNutrients[i].value;
+          const nutrientUnit = individualFoodNutrients[i].unitName;
           $macroList.append(`<li>${nameOfNutrient}: ${nutrientValue}</li>`);
+          // the below if/else if statement pulls the value of each nutrientId
           if (idOfNutrient === 1003) {
-            $protein.append(` : ${nutrientValue}`);
+            $protein.append(` : ${nutrientValue}${nutrientUnit}`);
           } else if (idOfNutrient === 1004) {
-            $fat.append(` : ${nutrientValue}`);
+            $fat.append(` : ${nutrientValue}${nutrientUnit}`);
           } else if (idOfNutrient === 1005) {
-            $carbohydrate.append(` : ${nutrientValue}`);
+            $carbohydrate.append(` : ${nutrientValue}${nutrientUnit}`);
           } else if (idOfNutrient === 1008) {
-            $calories.append(` : ${nutrientValue}`);
+            $calories.append(` : ${nutrientValue}${nutrientUnit}`);
           }
-        } // this loop prints out every nutrient
+        }
 
 
     })
