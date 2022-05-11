@@ -16,6 +16,7 @@ body {
 header {
     text-align:center;
     background-color:#9098B1;
+    border-bottom: 5px solid white;
 }
 
 #nutritionForm{
