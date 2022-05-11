@@ -7,7 +7,7 @@ const foodArray = [];
 
 // EVENT REFERENCES
 const $btnSearch = $("#btnSearch");
-const $btnAdd = $("#btnAdd");
+const $btnGet = $("#btnGet");
 const $userInput = $('#userInput[type="text"]');
 const $selectFood = $('#selectFood');
 const selectedFood = $('#selectFood option:selected');
@@ -40,7 +40,7 @@ function searchFoods(evt) {
             foodOption.innerHTML = foodChoices[i].description;
             $selectFood.append(foodOption);
         }  
-    $btnAdd.click(function(evt){
+    $btnGet.click(function(evt){
       evt.preventDefault();
         const foodMenu = document.getElementById('selectFood');
         const foodMenuValue = foodMenu.value; 

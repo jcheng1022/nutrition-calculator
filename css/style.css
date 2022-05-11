@@ -1,18 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Kanit:ital,wght@1,200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 * {
     box-sizing:border-box;
 }
+
 body {
-    display: flex;
-    height: 100vh;
     margin: 0;
+    background-color:#CEDAFF;
+    /* background-image: url("https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size:cover; */
+    font-family: 'IM Fell English SC', serif;
+}
+
+header {
+    text-align:center;
+    background-color:#9098B1;
+}
+
+#nutritionForm{
+    display:flex;
 
 }
 
-
-div {
-    justify-content: space-around;
-    align-items:center;
-    width: 500px;
-    height:300x;
-    border: solid black 2px;
+#searchIngredients {
+    display:flex;
+    justify-content:center;
 }
+
+
+button {
+    color: red;
+    background-color:white;
+    font-family: 'Russo One', sans-serif;
+
+}
+

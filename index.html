@@ -15,27 +15,25 @@
     </header>
 
     <main>
-      <div id="nutritionForm">
-        <!--  this area will contain the input area and two buttons (search ingredient, add ingredient) -->
-
+        <div id = "searchIngredients">
         <h2>Ingredient Search</h2>
         <form>
           <h3>Step One: Search your ingredient</h3>
           <input id="userInput" type="text" />
           <button id="btnSearch">Search Ingredient</button>
+        </div>
 
           <div id="selectForm">
             <h3>Step Two: Find your Ingredient in our List</h3>
             <label for="selectFood">Select an Ingredient</label>
             <select id="selectFood" name="foodList"></select>
 
-            <button id="btnAdd">Add Ingredient to Your List</button>
+            <button id="btnGet">Get Nutrition Info</button>
           </div>
         </form>
-      </div>
 
       <div id="nutritionResult">
-        <h2>Macronutrient Information</h2>
+        <h2>Nutritional Information</h2>
         <p id="macroInformation"></p>
         <ul id="macroList">
 
