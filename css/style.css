@@ -7,16 +7,18 @@
 
 body {
     margin: 0;
-    background-color:#CEDAFF;
-    /* background-image: url("https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-color:#edf0ff;
+    /* background-image: url("https://images.pexels.com/photos/1764702/pexels-photo-1764702.jpeg?auto=compress&cs=tinysrgb&w=1600");
     background-size:cover; */
-    font-family: 'IM Fell English SC', serif;
+
+
 }
 
 header {
     text-align:center;
-    background-color:#9098B1;
+    background-color: #ccd0ed;
     width: 100vw;
+    padding: 25px;
 
 }
 
@@ -55,6 +57,10 @@ header {
     width: 200px;
 }
 
+#macros {
+    border: 2px solid #d6d6d6;
+    border-radius:5px;
+}
 
 #topSection {
     width:100%;
@@ -77,24 +83,61 @@ header {
 #selectForm {
     flex: 1;
     text-align:center;
-    margin:10px;
+    margin:20px;
     width: 50%;
     padding: 30px 30px 30px 30px;
+    border: 2px solid #d6d6d6;
+    border-radius:5px;
 }
 
 #searchIngredients {
     flex: 1;
     text-align:center;
-    margin:10px;
+    align-items:center;
+    margin:20px;
     width: 50%;
     padding: 30px 30px 30px 30px;
+    border: 2px solid #d6d6d6;
+    border-radius:5px;
+}
+#userInput {
+    width: 200px;
+    padding: 5px;
+}
+#btnSearch {
+    color: black; 
+    background-color:#f0b678;
+    border-radius:50px;
+    width: 150px;
+    padding: 5px;
+    margin: 15px;
+    border: none;
 }
 
-button {
-    color: red;
-    background-color:white;
-    font-family: 'Russo One', sans-serif;
+#btnSearch:hover {
+    cursor: pointer;
+    opacity:75%;
+}
+#btnGet {
+    color: black; 
+    background-color:#f0b678;
+    border-radius:50px;
+    width: 150px;
+    padding: 5px;
+    margin: 15px;
+    border: none;
+}
+}
+#btnGet:hover {
+    cursor: pointer;
+    opacity:75%;
+}
 
+#selectFood {
+    padding: 3px;
+    margin:15px;
+    text-align:center;
+    border-radius: 5px;
 }
 
 

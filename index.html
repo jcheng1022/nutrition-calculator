@@ -18,25 +18,24 @@
 
   <main>
 
-    <div id="topSection">
-      <h2>Ingredient Search</h2>
-    </div>
     <div id="searchAndGet">
     <br>
       <div id="searchIngredients">
         <div id="formStepOne">
         <form>
           <h3>Step One: Search your ingredient</h3>
-          <input id="userInput" type="text" />
-          <button id="btnSearch">Search Ingredient</button>
+          <input id="userInput" type="text" placeholder="Enter an Ingredient" />
+          <button id="btnSearch">Search </button>
         </div>
       </div>
 
       <div id="selectForm">
         <h3>Step Two: Find your Ingredient in our List</h3>
       <div id="ingredientForm">
-        <label for="selectFood">Select an Ingredient</label>
-        <select id="selectFood" name="foodList"></select>
+        <label for="selectFood"></label>
+        <select id="selectFood" name="foodList">
+          <option disabled selected> Select an Ingredient</option>
+        </select>
         <button id="btnGet">Get Nutrition Info</button>
         </div>
       </div>
