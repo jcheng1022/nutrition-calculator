@@ -10,6 +10,7 @@ body {
 
 }
 
+
 header {
     text-align:center;
     background-color: #ccd0ed;
@@ -155,4 +156,15 @@ header {
     border-radius: 5px;
 }
 
+#nutritionResult {
+    margin:20px;
+    border: 2px solid #d6d6d6;
+    border-radius:5px;
+    padding:30px;
 
+}
+
+#macroList {
+    margin:20px;
+    width: 30%;
+}

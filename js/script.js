@@ -41,7 +41,11 @@ function searchFoods(evt) {
         for(let i=0;i<foodChoices.length;i++) {
             const foodOption = document.createElement('option');
             foodOption.value = i;
-            foodOption.innerHTML = foodChoices[i].description;
+            if (foodChoices[i].hasOwnProperty('brandName') === true) {
+              foodOption.innerHTML = (`${foodChoices[i].description} - ${foodChoices[i].brandName}`);
+            } else { 
+              foodOption.innerHTML = (`${foodChoices[i].description}`);
+            }
             $selectFood.append(foodOption);
         }  
     $btnGet.click(function(evt){
