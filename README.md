@@ -16,15 +16,17 @@ This project uses U.S Department of Agriculture's FoodData Central API to access
 
 <h2> Wireframes: </h2>
 <h3>Desktop Wireframe</h3>
-<h4> Current</h4>
-<img src="https://i.imgur.com/eJR9K4N.png" width="400"/>
-<h4>Future </h4>
-<img src="https://i.imgur.com/20aixxQ.png" width="400"/>
+<img src="https://i.imgur.com/eJR9K4N.png" width="350"/>
 <h3> Mobile Wireframe</h3>
-<img src="https://i.imgur.com/FOW3tP7.png" width="400"/>
+<img src="https://i.imgur.com/FOW3tP7.png" width="350"/>
 
 <hr>
+<h2>Getting Started</h2>
+<a href="https://jcheng1022.github.io/nutrition-calculator/" target="_blank"> GitHub Pages </a>
 
+<p> My application is currently deployed through GitHub Pages. Click above to navigate to it!</p>
+
+<hr>
 <h2> Future Enhancements</h2>
 <ul>
     <li>Users will be able to add ingredients into a list and the Nutrition Calculator will be able to return a nutritional information list for the combined list.</li>
