@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Kanit:ital,wght@1,200&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cambo&family=Homenaje&display=swap');
 * {
     box-sizing:border-box;
 }
@@ -8,9 +6,7 @@
 body {
     margin: 0;
     background-color:#edf0ff;
-    /* background-image: url("https://images.pexels.com/photos/1764702/pexels-photo-1764702.jpeg?auto=compress&cs=tinysrgb&w=1600");
-    background-size:cover; */
-
+    font-family: 'Cambo', serif;
 
 }
 
@@ -22,11 +18,19 @@ header {
 
 }
 
+#instructions {
+    margin: 20px;
+    border: 2px solid #d6d6d6;
+    border-radius:5px;
+    padding: 30px;
+    font-size:15px;
+}
 #macros {
     display:flex;
     text-align:center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 30px;
+    margin: 20px;
 }
 
 #calories{
@@ -62,6 +66,7 @@ header {
     border-radius:5px;
 }
 
+
 #topSection {
     width:100%;
     text-align:center;
@@ -80,6 +85,10 @@ header {
     justify-content:space-around;
 }
 
+#selectFood {
+    border:  2px solid #d6d6d6;
+    width:300px;
+}
 #selectForm {
     flex: 1;
     text-align:center;
@@ -103,6 +112,8 @@ header {
 #userInput {
     width: 200px;
     padding: 5px;
+    border:  2px solid #d6d6d6;
+    text-align:center;
 }
 #btnSearch {
     color: black; 
@@ -112,6 +123,8 @@ header {
     padding: 5px;
     margin: 15px;
     border: none;
+    font-family: 'Cambo', serif;
+    font-size:13px;
 }
 
 #btnSearch:hover {
@@ -126,8 +139,10 @@ header {
     padding: 5px;
     margin: 15px;
     border: none;
+    font-family: 'Cambo', serif;
+    font-size: 13px;
 }
-}
+
 #btnGet:hover {
     cursor: pointer;
     opacity:75%;
