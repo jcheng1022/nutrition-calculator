@@ -75,10 +75,6 @@ header {
     top:50%
 }
 
-/* #searchAndGet {
-    display: inline-block;
-    width:50%
-} */
 
 #searchAndGet {
     display: flex;

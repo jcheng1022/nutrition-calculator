@@ -1,6 +1,6 @@
 // VARIABLES
 const API =
-  "https://api.nal.usda.gov/fdc/v1/foods/search?api_key=4PDBxeBJbs8UKxXS7f3dzh6lmYb6hNulqgtrZMq4&query="; // this references to the Edamame API. Add the ingredient to the end to access the data
+  "https://api.nal.usda.gov/fdc/v1/foods/search?api_key=4PDBxeBJbs8UKxXS7f3dzh6lmYb6hNulqgtrZMq4&query="; 
 
 
 const foodArray = [];
@@ -11,10 +11,6 @@ const $btnGet = $("#btnGet");
 const $userInput = $('#userInput[type="text"]');
 const $selectFood = $('#selectFood');
 const selectedFood = $('#selectFood option:selected');
-const $caloriesInfo = $('caloriesInfo');
-const $fatInfo = $('fatInfo');
-const $carbohydrateInfo = $('carbohydrateInfo');
-const $proteinInfo = $('proteinInfo');
 const $listOfAddedFoods = $('#listOfAddedFoods');
 const $macroList = $('#macroList');
 const $protein = $('#protein');
@@ -23,12 +19,7 @@ const $fat = $('#fat');
 const $calories = $('#calories');
 // EVENT LISTENERS
 $btnSearch.on("click", searchFoods);
-// $btnAdd.on("click", addIngredient);
-// function addIngredient(evt) {
-//     evt.preventDefault();
-//     console.log(foodOption.value);
-// }
-// $btnAdd.on('click', addToList);
+
 // FUNCTIONS
 
 function searchFoods(evt) {
