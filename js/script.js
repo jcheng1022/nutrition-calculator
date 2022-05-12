@@ -34,8 +34,7 @@ $btnSearch.on("click", searchFoods);
 function searchFoods(evt) {
   evt.preventDefault();
   const userInput = $userInput.val();
-  const searchQuery = $.ajax(API + userInput);
-  searchQuery.then(
+  $.ajax(API + userInput).then(
     function (data) {
         const foodChoices = data.foods;
         for(let i=0;i<foodChoices.length;i++) {
